@@ -11,6 +11,11 @@ const StyledLink = styled.a`
 	color: black;
   text-align: center;
 	cursor: pointer;
+
+  &:hover{
+    background: #009ddc;
+		color: #fff;
+  }
 `;
 
 const Link = (props) =>{
