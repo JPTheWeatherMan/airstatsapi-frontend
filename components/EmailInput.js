@@ -23,7 +23,7 @@ const StyledInput = styled.input`
 `
 
 const Input = (props) => {
-  return <StyledInput placeholder={props.placeholder} onChange={props.onChange}></StyledInput>
+  return <StyledInput for={props.for} name={props.name} placeholder={props.placeholder} onChange={props.onChange}></StyledInput>
 }
 
 export default Input
