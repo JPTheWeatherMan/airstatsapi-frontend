@@ -10,6 +10,17 @@ const StyledButton = styled.button`
 	padding: 0.75rem 2rem;
 	color: black;
 	cursor: pointer;
+
+	&:focus{
+    box-shadow: 0 0 5px #009ddc;
+	  padding: 0.25rem;
+	  border: 1px solid #009ddc;
+  }
+
+  &:hover{
+    background: #009ddc;
+		color: #fff;
+  }
 `;
 
 const Button = (props) => {
