@@ -25,9 +25,7 @@ const generateNewKey = (props) => {
 			console.log("Please enter something");
 		}
 		
-		Axios.post("http://airstats.app/api/user", {
-			email: email
-		}, config)
+		Axios.post("http://Localhost:5000/user", querystring.stringify({email : email}), config)
 			.then((response) => console.log(response))
 			.catch((err) => console.log(err));
 	};
@@ -49,7 +47,6 @@ const generateNewKey = (props) => {
 				<FormGroup onSubmit={onSubmit}>
 					<EmailInput
 						placeholder='Email'
-						for='email'
 						onChange={emailInputOnChange}
 					></EmailInput>
 					<Button text='Get API Key' width='25%' type='submit'></Button>
