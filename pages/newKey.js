@@ -9,23 +9,27 @@ import TextContent from "../components/TextContent";
 import EmailInput from "../components/EmailInput";
 import FormGroup from "../components/FormGroup";
 import Axios from "axios";
-import querystring from 'querystring'
+import querystring from "querystring";
 
 const generateNewKey = (props) => {
 	const [email, setEmail] = useState("");
 	const config = {
 		headers: {
-			'Content-Type' : 'application/x-www-form-urlencoded'
+			"Content-Type": "application/x-www-form-urlencoded"
 		}
-	}
+	};
 
 	const onSubmit = (e) => {
 		e.preventDefault();
 		if (email === "") {
 			console.log("Please enter something");
 		}
-		
-		Axios.post("http://Localhost:5000/user", querystring.stringify({email : email}), config)
+
+		Axios.post(
+			"http://Localhost:5000/user",
+			querystring.stringify({ email: email }),
+			config
+		)
 			.then((response) => console.log(response))
 			.catch((err) => console.log(err));
 	};
